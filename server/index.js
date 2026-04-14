@@ -10,8 +10,8 @@ const cookieSession = require('cookie-session');
 
 const logRoutes = require('./middleware/logRoutes');
 
-// 🔎 Import the checkAuthentication middleware
-const checkAuthentication = require('./middleware/checkAuthentication');
+// TODO: Import the checkAuthentication middleware
+// const checkAuthentication = require('./middleware/checkAuthentication');
 
 const { register, login, getMe, logout } = require('./controllers/authControllers');
 const { listUsers, updateUser, deleteUser } = require('./controllers/userControllers');

@@ -4,6 +4,9 @@ const userModel = require('../models/userModel');
 const register = async (req, res, next) => {
   try {
     const { username, password } = req.body;
+    if (!username || !password) {
+      return res.status(400).send({ error: 'Username and password are required.' });
+    }
 
     const existingUser = await userModel.findByUsername(username);
     if (existingUser) {
